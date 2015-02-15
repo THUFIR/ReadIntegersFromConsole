@@ -14,12 +14,13 @@ public class PopulateList {
         List<Integer> ints = new ArrayList<>();
         int iterations = 0;
         int i = 0;
-        do {
+        while (iterations < 6) {
             i = getInt();
             ints.add(i);
             System.out.println("sum is " + sumList(ints));
+            System.out.println("avg is " + avg(ints));
             iterations++;
-        } while (iterations < 6);
+        }
     }
 
     private int getInt() {
@@ -27,6 +28,12 @@ public class PopulateList {
         String s = c.readLine();
         int i = Integer.parseInt(s);
         return i;
+    }
+
+    private float avg(List<Integer> ints) {
+        float s = (float) sumList(ints);
+        float avg = s / ints.size();
+        return avg;
     }
 
     private int sumList(List<Integer> ints) {
