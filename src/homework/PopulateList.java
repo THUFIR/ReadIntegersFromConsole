@@ -1,4 +1,4 @@
-package javaapplication3;
+package homework;
 
 import java.io.Console;
 import java.util.ArrayList;
